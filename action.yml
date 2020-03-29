@@ -1,14 +1,14 @@
 name: 'AWS SAM action docker image'
 description: 'Docker image to run AWS SAM command in a docker image and deploy in AWS'
 inputs:
-    sam_command:
-        description: 'AWS SAM CLI command to run'
+    command:
+        description: 'AWS CLI commands to run'
         required: true
 
 runs:
-    using: 'docke'
+    using: 'docker'
     image: 'Dockerfile'
     args:
-        - ${{ inputs.sam_command }}
+        - ${{ inputs.command }}
         
                 
