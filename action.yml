@@ -14,6 +14,5 @@ runs:
     image: 'Dockerfile'
     args:
         - ${{ inputs.command }}
-        - ${{ secrets.DOCKER_SECRET }}
         
                 
